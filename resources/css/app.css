@@ -1,0 +1,80 @@
+@import 'swiper/swiper-bundle.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Awesome - diimpor lokal via npm */
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+/* Komponen khusus aplikasi */
+@layer components {
+  .form-input {
+    @apply w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-600;
+  }
+
+  .btn-primary {
+    @apply bg-red-700 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-800;
+  }
+}
+
+/* Aksesbilitas */
+html.high-contrast {
+    background-color: black;
+    color: yellow;
+    filter: contrast(200%);
+}
+
+html.grayscale {
+    filter: grayscale(100%);
+}
+
+#sambat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#sambat-box {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  margin-bottom: 8px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#sambat-toggle {
+  background-color: #ff0202;
+  color: #fdfcfc;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sambat-link {
+  display: inline-block;
+  margin-top: 5px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.sambat-link:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
